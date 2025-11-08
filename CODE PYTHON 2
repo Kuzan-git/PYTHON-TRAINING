@@ -1,0 +1,35 @@
+# PARTIE 1
+nom = input("Quel est ton nom ? ")
+prenom = input("Quel est ton prénom ? ")
+age = int(input("Quel est ton âge ? "))
+
+# PARTIE 2 (a)
+if nom == "Camara" and prenom == "Ali" and age == 18:
+    print("Bienvenue, bon retour Ali Camara, vous êtes un ancien utilisateur.")
+elif nom == "Camara" and prenom == "Momo" and age == 20:
+    print("Bienvenue, bon retour Momo Camara, vous êtes un ancien utilisateur.")
+else:
+    print(f"Bienvenue {prenom} {nom}, vous êtes un nouvel utilisateur.")
+
+# PARTIE 2 (b)
+if age < 4:
+    print("Tu es un bébé.")
+elif 4 <= age < 12:
+    print("Tu es un enfant.")
+elif 12 <= age < 17:
+    print("Tu es un adolescent.")
+elif 17 <= age < 18:
+    print("Tu es un jeune adulte.")
+else:
+    print("Tu es un adulte.")
+
+# PARTIE 3 (option parent)
+if 14 <= age < 18:
+    parent = input("Es-tu parent ? (oui/non) : ").lower()
+    if parent == "oui":
+        nomenfant = int(input("Combien as-tu d'enfants ? "))
+        print(f"Tu as {nomenfant} enfants.")
+    else:
+        print("D'accord, tu n'as pas d'enfants.")
+elif age < 14:
+    print("Tu es trop jeune pour avoir des enfants.")
