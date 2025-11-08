@@ -1,0 +1,15 @@
+# PARTIE 1
+nom = input("Quel est ton nom ? ")
+prenom = input("Quel est ton prénom ? ")
+age = int(input("Quel est ton âge ? "))
+
+# PARTIE 2
+if nom == "Camara":
+    print("Est-ce bien toi, Ali Camara ?")
+else:
+    print("D'accord, tu n'es pas Camara.")
+
+if nom == "Camara" and prenom == "Ali":
+    print("Tu es de retour, Ali Camara !")
+else:
+    print(f"Bienvenue {prenom} {nom} !")
