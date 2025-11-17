@@ -1,0 +1,27 @@
+# Partie 1 : Informations de l'utilisateur
+prenom = input("What is your first name? ")
+nom = input("What is your last name? ")
+age = int(input("How old are you? "))
+
+# Partie 2 : Authentification
+if prenom == "Ali" and nom == "Camara" and age == 18:
+
+    # Vérification OUI/NON
+    reponse = input("You are Ali Camara? (oui/non): ").lower()
+    while reponse not in ["oui", "non"]:
+        print("⚠️ This response is not valid, you must answer 'oui' or 'non'.")
+        reponse = input("You are Ali Camara? (oui/non): ").lower()
+
+    if reponse == "oui":
+        # Mot de passe
+        mot_de_passe = input("Enter Ali Camara's password: ").lower()
+        while mot_de_passe != "azerty":
+            print("⚠️ Incorrect password! Try again.")
+            mot_de_passe = input("Enter Ali Camara's password: ").lower()
+
+        print("✅ Login successful! Welcome Ali Camara 🙌")
+    else:
+        print("❌ Access denied. You are not Ali Camara.")
+
+else:
+    print(f"Hello {prenom} {nom}, you are a new user.")
