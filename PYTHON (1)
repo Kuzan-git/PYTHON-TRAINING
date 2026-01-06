@@ -1,0 +1,9 @@
+gestionnaire_de_mot_passe = []
+mot_de_passe = ""
+
+while mot_de_passe != "1234567890":
+    mot_de_passe = input("Veuillez ECRIRE votre mot de passe : ")
+    gestionnaire_de_mot_passe.append(mot_de_passe)
+
+print(f"Les différents mots de passe essayés étaient : {gestionnaire_de_mot_passe}")
+print(f"Le nombre d'essais était de : {len(gestionnaire_de_mot_passe)}")
