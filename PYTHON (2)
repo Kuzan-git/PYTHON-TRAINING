@@ -1,0 +1,15 @@
+all_mdp = []
+mot_de_passe = ""
+
+while mot_de_passe != "123456789":
+    mot_de_passe = input("Veuillez ECRIRE votre mot de passe Google : ")
+
+    if mot_de_passe == "123456789":
+        print("✔️ Bien joué, vous avez entré le bon mot de passe")
+    else:
+        print("❌ Mot de passe incorrect, réessayez")
+
+    all_mdp.append(mot_de_passe)
+
+print(f"Vos différentes tentatives de mot de passe sont : {all_mdp}")
+print(f"Le nombre de tentatives est : {len(all_mdp)}")
