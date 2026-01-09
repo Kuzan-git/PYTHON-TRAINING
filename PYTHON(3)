@@ -1,0 +1,30 @@
+from datetime import datetime
+
+id_account = []
+mot_de_passe = ""
+
+# Informations utilisateur
+nom = input("Quel est ton nom ? ")
+prenom = input("Quel est ton prénom ? ")
+age = int(input("Quel est ton âge ? "))
+
+# Authentification (3 tentatives max)
+while mot_de_passe != "123456789" and len(id_account) < 3:
+    mot_de_passe = input("Quel est ton mot de passe Google ? ")
+    id_account.append(mot_de_passe)
+
+    if mot_de_passe == "123456789":
+        print("✔️ Mot de passe correct")
+    else:
+        print("❌ Mot de passe incorrect")
+
+# Résultat final
+if mot_de_passe != "123456789":
+    print("❌ Impossible de continuer la procédure (3 tentatives atteintes)")
+else:
+    print(f"Bienvenue {prenom} {nom}")
+
+# Affichage des infos
+print(f"Nombre de tentatives : {len(id_account)}")
+print(f"Mots de passe essayés : {id_account}")
+print(f"Aujourd'hui nous sommes {datetime.now().strftime('%d/%m/%Y')} à {datetime.now().strftime('%Hh%M')}")
