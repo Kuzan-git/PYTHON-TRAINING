@@ -1,0 +1,41 @@
+from datetime import datetime
+
+# Liste qui va stocker toutes les fiches utilisateurs
+liste_utilisateurs = []
+
+continuer = "oui"
+
+while continuer == "oui":
+    print("\n--- Création d'une fiche utilisateur ---")
+
+    nom = input("Nom : ")
+    prenom = input("Prénom : ")
+    age = int(input("Âge : "))
+
+    # Date et heure de création
+    date_creation = datetime.now().strftime("%d/%m/%Y à %Hh%M")
+
+    # Création de la fiche utilisateur (dictionnaire)
+    fiche_utilisateur = {
+        "nom": nom,
+        "prenom": prenom,
+        "age": age,
+        "date_creation": date_creation
+    }
+
+    # Ajout de la fiche à la liste
+    liste_utilisateurs.append(fiche_utilisateur)
+
+    print("✅ Fiche enregistrée avec succès !")
+
+    continuer = input("Souhaitez-vous ajouter un autre utilisateur ? (oui/non) ").lower()
+
+# Affichage final
+print("\n📋 LISTE DES UTILISATEURS ENREGISTRÉS :\n")
+
+for utilisateur in liste_utilisateurs:
+    print(
+        f"- {utilisateur['prenom']} {utilisateur['nom']} | "
+        f"{utilisateur['age']} ans | "
+        f"Créé le {utilisateur['date_creation']}"
+    )
